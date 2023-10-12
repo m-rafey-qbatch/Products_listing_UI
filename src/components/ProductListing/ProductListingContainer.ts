@@ -9,7 +9,7 @@ import {
 } from "../../reducers/cartSlice";
 import { selectProducts, selectLoading, selectError, selectCartItems } from "../../selectors";
 import ProductListing from "./ProductListing";
-import { CartItem } from "../../types";
+import { Data } from "../../types";
 
 const mapStateToProps = (state: RootState) => {
   return {
@@ -23,9 +23,9 @@ const mapStateToProps = (state: RootState) => {
 const mapDispatchToProps = (dispatch: ThunkDispatch<any, any, any>) => {
   return {
     fetchProducts: () => dispatch(fetchProducts()),
-    addToCart: (item:CartItem ) => dispatch(addToCart(item)),
-    removeFromCart: (itemId: string) => dispatch(removeFromCart(itemId)),
-    decrementQuantity: (itemId: string) => dispatch(decrementQuantity(itemId)),
+    addToCart: (item:Data ) => dispatch(addToCart(item)),
+    removeFromCart: (itemId: number) => dispatch(removeFromCart(itemId)),
+    decrementQuantity: (itemId: number) => dispatch(decrementQuantity(itemId)),
   };
 };
 

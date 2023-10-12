@@ -1,6 +1,6 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
-import {ProductListing} from "../components";
+import { ProductListing } from "../components";
 
 describe("ProductListing Component", () => {
   it("displays loading spinner", () => {
@@ -43,8 +43,8 @@ describe("ProductListing Component", () => {
 
   it("displays a list of products", () => {
     const products = [
-      { id: "1", name: "Product 1", price: 10 },
-      { id: "2", name: "Product 2", price: 20 },
+      { id: 1, name: "string", price: 1, colour: "Red", img: "img" },
+      { id: 2, name: "string", price: 2, colour: "Blue", img: "img" },
     ];
     const { getAllByTestId } = render(
       <ProductListing
@@ -65,7 +65,10 @@ describe("ProductListing Component", () => {
   });
 
   it("handles adding a product to the cart", () => {
-    const products = [{ id: "1", name: "Product 1", price: 10 }];
+    const products = [
+      { id: 1, name: "string", price: 1, colour: "Red", img: "img" },
+      { id: 2, name: "string", price: 2, colour: "Blue", img: "img" },
+    ];
     const addToCart = jest.fn();
     const { getByTestId } = render(
       <ProductListing
@@ -94,7 +97,10 @@ describe("ProductListing Component", () => {
   });
 
   it("handles decrementing a product in the cart", () => {
-    const products = [{ id: "1", name: "Product 1", price: 10 }];
+    const products = [
+      { id: 1, name: "string", price: 1, colour: "Red", img: "img" },
+      { id: 2, name: "string", price: 2, colour: "Blue", img: "img" },
+    ];
     const decrementQuantity = jest.fn();
     const { getByTestId } = render(
       <ProductListing
@@ -105,7 +111,7 @@ describe("ProductListing Component", () => {
         addToCart={jest.fn()}
         removeFromCart={jest.fn()}
         decrementQuantity={decrementQuantity}
-        cartItems={[{ id: "1", name: "Product 1", price: 10, quantity: 2 }]}
+        cartItems={[{ id: 1, name: "Product 1", price: 10, quantity: 2 }]}
         selectedColor="All"
       />
     );
@@ -117,7 +123,10 @@ describe("ProductListing Component", () => {
   });
 
   it("handles removing a product from the cart", () => {
-    const products = [{ id: "1", name: "Product 1", price: 10 }];
+    const products = [
+      { id: 1, name: "string", price: 1, colour: "Red", img: "img" },
+      { id: 2, name: "string", price: 2, colour: "Blue", img: "img" },
+    ];
     const removeFromCart = jest.fn();
     const { getByTestId } = render(
       <ProductListing
@@ -128,7 +137,7 @@ describe("ProductListing Component", () => {
         addToCart={jest.fn()}
         removeFromCart={removeFromCart}
         decrementQuantity={jest.fn()}
-        cartItems={[{ id: "1", name: "Product 1", price: 10, quantity: 2 }]}
+        cartItems={[{ id: 1, name: "Product 1", price: 10, quantity: 2 }]}
         selectedColor="All"
       />
     );

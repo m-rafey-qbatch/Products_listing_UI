@@ -3,7 +3,7 @@ import { API_URL } from "../constants";
 import { Data } from "../types";
 
 interface State {
-  data: any[];
+  data: Data[];
   loading: boolean;
   error: string | null;
 }
@@ -19,7 +19,6 @@ const productsSlice = createSlice({
   initialState,
   reducers: {
     setProducts: (state, action: PayloadAction<Data[]>) => {
-      console.log(action.payload)
       state.data = Object.keys(action.payload).length ?action.payload : [];
     },
     setLoading: (state, action: PayloadAction<boolean>) => {

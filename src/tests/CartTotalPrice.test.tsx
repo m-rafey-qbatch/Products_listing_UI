@@ -1,4 +1,3 @@
-import React from "react";
 import { render } from "@testing-library/react";
 import {CartTotalPrice} from "../components";
 
@@ -11,8 +10,8 @@ describe("CartTotalPrice Component", () => {
 
   it("displays the correct total price for items in the cart", () => {
     const cartItems = [
-      { id: "1", name: "Item 1", price: 10, quantity: 2 },
-      { id: "2", name: "Item 2", price: 15, quantity: 3 },
+      { id: 1, name: "Item 1", price: 10, quantity: 2 },
+      { id: 2, name: "Item 2", price: 15, quantity: 3 },
     ];
 
     const { getByText } = render(<CartTotalPrice cartItems={cartItems} />);

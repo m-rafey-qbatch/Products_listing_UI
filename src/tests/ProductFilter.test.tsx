@@ -1,11 +1,12 @@
 import { render, fireEvent } from "@testing-library/react";
-import {ProductFilter} from "../components";
+import { ProductFilter } from "../components";
+import { Data } from "../types";
 
 describe("ProductFilter Component", () => {
   it("changes color selection", () => {
     const products = [
-      { name: "Product 1", colour: "Red" },
-      { name: "Product 2", colour: "Blue" },
+      { id: 1, name: "string", price: 1, colour: "Red", img: "img" },
+      { id: 2, name: "string", price: 2, colour: "Blue", img: "img" },
     ];
     const handleColorChange = jest.fn();
 
@@ -30,7 +31,7 @@ describe("ProductFilter Component", () => {
   });
 
   it("displays loading message", () => {
-    const products: any[] = [];
+    const products: Data[] = [];
     const handleColorChange = jest.fn();
 
     const { getByText } = render(

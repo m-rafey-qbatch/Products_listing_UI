@@ -1,8 +1,9 @@
 import React from "react";
 import "./index.css";
+import { Data } from "../../types";
 
 interface ProductFilterProps {
-  products: any[];
+  products: Data[];
   handleColorChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
   loading: boolean;
   error: string | null;
@@ -18,7 +19,7 @@ const ProductFilter: React.FC<ProductFilterProps> = ({
   if(!loading && !error){
     colors = [
       "All",
-      ...Array.from(new Set(products.map((product) => product.colour))),
+      ...Array.from(new Set(products.map((product: Data) => product.colour))),
     ];
   }
 

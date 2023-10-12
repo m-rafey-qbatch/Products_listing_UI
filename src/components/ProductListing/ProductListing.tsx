@@ -2,16 +2,16 @@ import React, { useEffect } from "react";
 import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus, faTrash } from "@fortawesome/free-solid-svg-icons";
-import { CartItem } from "../../types";
+import { CartItem, Data } from "../../types";
 
 interface ProductListingProps {
   fetchProducts: () => void;
-  products: any[];
+  products: Data[];
   loading: boolean;
   error: string | null;
-  addToCart: (item: CartItem) => void;
-  removeFromCart: (itemId: string) => void;
-  decrementQuantity: (itemId: string) => void;
+  addToCart: (item: Data) => void;
+  removeFromCart: (itemId: number) => void;
+  decrementQuantity: (itemId: number) => void;
   cartItems: CartItem[];
   selectedColor: string;
 }
@@ -34,10 +34,10 @@ const ProductListing: React.FC<ProductListingProps> = ({
 
   const handleQuantityChange = (
     e: React.MouseEvent<HTMLButtonElement>,
-    productId: string
+    productId: number
   ) => {
     const product = {
-      ...products.find((product) => product.id === productId),
+      ...(products.find((product) => product.id === productId) as Data),
     };
     if (product) {
       if (e.currentTarget.id === "decrement") {
@@ -48,11 +48,11 @@ const ProductListing: React.FC<ProductListingProps> = ({
     }
   };
 
-  const handleDelete = (productId: string) => {
+  const handleDelete = (productId: number) => {
     removeFromCart(productId);
   };
 
-  const isItemEqualsZero = (productId: string) => {
+  const isItemEqualsZero = (productId: number) => {
     const itemInCart = cartItems.find((item) => item.id === productId);
     return itemInCart ? (itemInCart.quantity === 0 ? true : false) : true;
   };
