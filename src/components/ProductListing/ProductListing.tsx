@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import "./productListing.css";
+import React, { useEffect } from "react";
+import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { CartItem } from "../../types";
@@ -29,6 +29,7 @@ const ProductListing: React.FC<ProductListingProps> = ({
 }) => {
   useEffect(() => {
     fetchProducts();
+    // eslint-disable-next-line
   }, []);
 
   const handleQuantityChange = (

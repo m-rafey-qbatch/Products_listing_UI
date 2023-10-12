@@ -1,2 +1,1 @@
-import CartTotalPriceContainer from "./CartTotalPrice.container";
-export default CartTotalPriceContainer;
+export { default } from "./CartTotalPriceContainer";

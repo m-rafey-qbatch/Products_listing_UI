@@ -1,5 +1,5 @@
 import React from "react";
-import "./cartTotalPrice.css";
+import "./index.css";
 import { CartItem } from "../../types";
 
 interface CartTotalPriceProps {

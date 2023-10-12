@@ -1,2 +1,1 @@
-import ProductFilterContainer from "./ProductFilter.container";
-export default ProductFilterContainer;
+export { default } from "./ProductFilterContainer";

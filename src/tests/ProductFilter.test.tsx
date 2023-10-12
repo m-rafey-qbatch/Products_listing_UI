@@ -1,5 +1,5 @@
 import { render, fireEvent } from "@testing-library/react";
-import ProductFilter from "../components/ProductFilter/ProductFilter";
+import {ProductFilter} from "../components";
 
 describe("ProductFilter Component", () => {
   it("changes color selection", () => {

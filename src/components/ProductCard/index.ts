@@ -1,2 +1,1 @@
-import ProductContainer from "./ProductCard.container";
-export default ProductContainer;
+export { default } from "./ProductCardContainer";

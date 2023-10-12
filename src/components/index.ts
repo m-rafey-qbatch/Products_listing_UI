@@ -1,6 +1,4 @@
-import CartTotalPrice from "./CartTotalPrice/CartTotalPrice";
-import ProductCard from "./ProductCard/ProductCard";
-import ProductFilter from "./ProductFilter/ProductFilter";
-import ProductListing from "./ProductListing/ProductListing";
-
-export default { CartTotalPrice, ProductCard, ProductFilter, ProductListing };
+export { default as CartTotalPrice } from "./CartTotalPrice/CartTotalPrice";
+export { default as ProductCard } from "./ProductCard/ProductCard";
+export { default as ProductFilter } from "./ProductFilter/ProductFilter";
+export { default as ProductListing } from "./ProductListing/ProductListing";

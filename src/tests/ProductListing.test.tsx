@@ -1,6 +1,6 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
-import ProductListing from "../components/ProductListing/ProductListing";
+import {ProductListing} from "../components";
 
 describe("ProductListing Component", () => {
   it("displays loading spinner", () => {

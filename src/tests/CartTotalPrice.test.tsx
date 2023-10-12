@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import CartTotalPrice from "../components/CartTotalPrice/CartTotalPrice";
+import {CartTotalPrice} from "../components";
 
 describe("CartTotalPrice Component", () => {
   it("displays the total price as €0.00 when the cart is empty", () => {

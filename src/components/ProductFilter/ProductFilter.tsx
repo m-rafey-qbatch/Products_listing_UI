@@ -1,5 +1,5 @@
 import React from "react";
-import "./productFilter.css";
+import "./index.css";
 
 interface ProductFilterProps {
   products: any[];
