@@ -1,5 +1,4 @@
 import { connect } from "react-redux";
-import { ThunkDispatch } from "@reduxjs/toolkit";
 import { RootState } from "../../reducers";
 import {
   selectCartItems,
@@ -12,13 +11,8 @@ const mapStateToProps = (state: RootState) => {
   };
 };
 
-const mapDispatchToProps = (dispatch: ThunkDispatch<any, any, any>) => {
-  return {};
-};
-
 const CartTotalPriceContainer = connect(
   mapStateToProps,
-  mapDispatchToProps
 )(CartTotalPrice);
 
 export default CartTotalPriceContainer;
