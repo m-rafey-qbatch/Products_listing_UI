@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ProductCard from "../components/ProductCard";
 
-const LandingPage: React.FC = () => {
+const CartPage: React.FC = () => {
   return (
     <>
         <ProductCard />
@@ -9,4 +9,4 @@ const LandingPage: React.FC = () => {
   );
 };
 
-export default LandingPage;
+export default CartPage;
