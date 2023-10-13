@@ -74,6 +74,12 @@
   color: #fff;
 }
 
+.delete-button:disabled {
+  cursor: not-allowed;
+  background-color: gray;
+  color: #fff;
+}
+
 .delete-button {
   background-color: #ff0000;
   color: #fff;

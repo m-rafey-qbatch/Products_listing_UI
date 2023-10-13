@@ -111,6 +111,7 @@ const ProductListing: React.FC<ProductListingProps> = ({
               </div>
               <div className="quantity-row-2">
                 <button
+                  disabled={isItemEqualsZero(product.id)}
                   onClick={() => handleDelete(product.id)}
                   className="delete-button"
                   data-testid="remove-1"
