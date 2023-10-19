@@ -66,7 +66,7 @@ const ProductListing: React.FC<ProductListingProps> = ({
   }
 
   return (
-    <div>
+    <div className="product-list-container">
       {products
         .filter(
           (product) =>

@@ -14,7 +14,7 @@ const CartTotalPrice: React.FC<CartTotalPriceProps> = ({
     0
   );
 
-  return <div className="total-price">Total: €{totalPrice.toFixed(2)}</div>;
+  return <div className="total-price">Total: {totalPrice.toFixed(2)} 💰</div>;
 };
 
 export default CartTotalPrice;
