@@ -6,10 +6,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-    background-image: url('../public/bg.webp');
-    background-size: cover; /* Scale the image to cover the entire background */
-    background-position: center; /* Center the image horizontally and vertically */
-    background-attachment: fixed; /* Fix the background image in place */
+    /* background-image: url('../public/bg.webp');
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed;  */
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
